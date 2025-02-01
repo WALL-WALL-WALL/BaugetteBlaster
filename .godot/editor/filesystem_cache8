@@ -1,9 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1738441273
-BaugetteBlasters.tscn::PackedScene::2945765059243311333::1738440835::0::1::::<><>::res://scripts/cloud_layer.gd<>uid://cwuu2e38h0g65::::res://level_art/seamless-blue-sky-texture.jpg<>uid://b3cgqbpuhqquf::::res://level_art/lv1midground.png<>uid://c1bgiu5yrmw4b::::res://level_art/lv1foreground.png<>uid://d3lfehl003idj::::res://level_art/temptileset.webp<>uid://duuk03miavmct::::res://player.tscn
+::res://::1738449423
+BaugetteBlasters.tscn::PackedScene::2945765059243311333::1738449423::0::1::::<><>::res://scripts/cloud_layer.gd<>uid://cwuu2e38h0g65::::res://level_art/seamless-blue-sky-texture.jpg<>uid://b3cgqbpuhqquf::::res://level_art/lv1midground.png<>uid://c1bgiu5yrmw4b::::res://level_art/lv1foreground.png<>uid://d3lfehl003idj::::res://level_art/temptileset.webp<>uid://duuk03miavmct::::res://player.tscn
 icon.svg::CompressedTexture2D::631268779909604934::1738404198::1738404242::1::::<><>::
-player.tscn::PackedScene::8604979783252213167::1738440245::0::1::::<><>::uid://br28t5qtmj5kx::::res://player_animations/frame_0_delay-0.25s.png<>res://scripts/player_move.gd<>uid://h7xir41g7tfl::::res://player_animations/frame_1_delay-0.25s.png<>uid://cafu0d3vtuyax::::res://player_animations/frame_2_delay-0.25s.png<>uid://dfocjy6fmlwdg::::res://player_animations/frame_3_delay-0.25s.png
-::res://level_art/::1738441243
+player.tscn::PackedScene::8604979783252213167::1738449423::0::1::::<><>::uid://br28t5qtmj5kx::::res://player_animations/frame_0_delay-0.25s.png<>res://scripts/player_move.gd<>uid://h7xir41g7tfl::::res://player_animations/frame_1_delay-0.25s.png<>uid://cafu0d3vtuyax::::res://player_animations/frame_2_delay-0.25s.png<>uid://dfocjy6fmlwdg::::res://player_animations/frame_3_delay-0.25s.png
+level2.tscn::PackedScene::541220687759874574::1738449423::0::1::::<><>::
+::res://level_art/::1738450033
+kempen-peterstrasse-west-650.jpg::CompressedTexture2D::2464221728323888020::1738450033::1738450070::1::::<><>::
 lv1foreground.png::CompressedTexture2D::6600195365961743139::1738441243::1738441277::1::::<><>::
 lv1midground.png::CompressedTexture2D::4356230012339331741::1738441242::1738441277::1::::<><>::
 seamless-blue-sky-texture.jpg::CompressedTexture2D::6359546293652509740::1738438703::1738438718::1::::<><>::
