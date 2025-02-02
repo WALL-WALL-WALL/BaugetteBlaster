@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d3lfehl003idj" path="res://level_art/temptileset.webp" id="4_2xn6d"]
 [ext_resource type="PackedScene" uid="uid://duuk03miavmct" path="res://player.tscn" id="5_y8myv"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c0ika"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1s8c6"]
 texture = ExtResource("4_2xn6d")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
@@ -829,7 +829,7 @@ texture_region_size = Vector2i(64, 64)
 [sub_resource type="TileSet" id="TileSet_sk8u6"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_c0ika")
+sources/0 = SubResource("TileSetAtlasSource_1s8c6")
 
 [node name="Node2D" type="Node2D"]
 
