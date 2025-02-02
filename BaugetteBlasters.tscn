@@ -849,15 +849,16 @@ motion_scale = Vector2(0.5, 1)
 motion_mirroring = Vector2(2950, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/mountain"]
-position = Vector2(1467.52, 936.62)
+position = Vector2(1468, 997)
 scale = Vector2(0.294896, 0.294896)
 texture = ExtResource("2_ow322")
 
 [node name="hills" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.9, 1)
 motion_mirroring = Vector2(3020, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/hills"]
-position = Vector2(1514, 913)
+position = Vector2(1495, 1194)
 scale = Vector2(0.302475, 0.302475)
 texture = ExtResource("3_kdipg")
 

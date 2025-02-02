@@ -1,0 +1,5 @@
+res://BaugetteBlasters.tscn
+res://player.tscn
+res://level2.tscn
+res://scripts/bullet.gd
+res://scripts/player_move.gd
