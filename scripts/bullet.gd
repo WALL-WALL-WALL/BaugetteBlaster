@@ -21,7 +21,7 @@ func set_velocity(mouse):
 
 func _on_body_entered(body: Node2D) -> void:
 	if body != CharacterBody2D:
-		if body == TileMap:
+		if body == TileMapLayer:
 			queue_free()
 		else:
 		#if body.is_in_group("mobs")

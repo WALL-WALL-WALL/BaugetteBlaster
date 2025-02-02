@@ -5,25 +5,30 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -450.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
 var playerstate = "idle"
 var animation_lock = false
+var is_in_air = false
+
 @export var Bullet : PackedScene = preload("res://bullet.tscn")
 
-func _ready():
-	if $AnimatedSprite2D.animation_finished:
-		on_animation_finished()
+func _ready():   #this occurs ONCE after initialization is finished
+	pass
 	
 func _process(_delta):
 	if Input.is_action_just_pressed("bang"):
 		shoot()
 
+
 func _physics_process(delta: float) -> void:
 	
-	# Add the gravity.
+	# Add the gravity.  (+update is_in_air)
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		if velocity.y < 0:
 			playerstate = "jump"
+			if not is_in_air:
+				is_in_air = true
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_select") and is_on_floor():
@@ -52,6 +57,8 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
+		#if $AnimatedSprite2D.get_animation() == &"impact":
+		#	pass
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	playeranim()
@@ -59,41 +66,39 @@ func _physics_process(delta: float) -> void:
 
 #refactored animation code to use global variable playerstate -S
 #New System allows for hopefully better control over which anims play when -S
+#from Kate: Impact animation didn't work because is_in_air was a local variable set to false each frame
+#from Kate: also playeranim() occurs after previous code set state to not "jump" if on ground that frame
 func playeranim():
 	if animation_lock == true:
 		return
-		
-	var is_in_air = false
-	
 	if playerstate == "idle":
 		$AnimatedSprite2D.play("idle")
 	elif playerstate == "run":
 		$AnimatedSprite2D.play("run")
 	elif playerstate == "jump":
 		$AnimatedSprite2D.play("falling")
-		if is_on_floor():
-			if (is_in_air == true):
-				is_in_air = false
-				#this is refusing to work and im loosing my mind
-				$AnimatedSprite2D.play("impact")
-				animation_lock = true
-		else:
-			is_in_air = true
-			
+	
+	if is_on_floor():
+		if is_in_air:
+			is_in_air = false
+			$AnimatedSprite2D.play("impact")
+			animation_lock = true
+
+#from Kate: the AnimationLoop button was on for "impact" in SpriteFrames tab, preventing the signal from being emitted
 func on_animation_finished():
 	animation_lock = false
 
+
 func shoot():
-	#(make player stop and/or turn toward mouse when shooting?)
-	if get_viewport().get_mouse_position().x < get_viewport().size.x/2:
+	const distMuzzle = 100
+	if get_local_mouse_position().x < 0:            #If shot at spawn, sprite would turn if mouse was on screen's left-side instead of player's
 		$AnimatedSprite2D.flip_h = true
 	else:
 		$AnimatedSprite2D.flip_h = false
-	$BulletSpawn.position.x = 100 - 200 * int($AnimatedSprite2D.flip_h)
+	$BulletSpawn.position.x = distMuzzle - distMuzzle*2 * int($AnimatedSprite2D.flip_h)
 	int()
-	var b = Bullet.instantiate()
+	var b = Bullet.instantiate()          #needs preload b/c "Bullet" isn't in this source
 	b.position = $BulletSpawn.position
-	var mouse = get_local_mouse_position()
-	b.set_velocity(mouse)
+	b.set_velocity(get_local_mouse_position())
 	
 	add_child(b)

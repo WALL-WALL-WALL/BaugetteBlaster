@@ -1,3 +1,6 @@
 res://level2.tscn
 res://BaugetteBlasters.tscn
 res://player.tscn
+res://scripts/bullet.gd
+res://scripts/cloud_layer.gd
+res://scripts/player_move.gd

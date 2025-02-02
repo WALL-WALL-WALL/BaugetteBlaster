@@ -1,11 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1738530909
-BaugetteBlasters.tscn::PackedScene::2945765059243311333::1738530909::0::1::::<><>::res://scripts/cloud_layer.gd<>uid://cwuu2e38h0g65::::res://level_art/seamless-blue-sky-texture.jpg<>uid://b3cgqbpuhqquf::::res://level_art/lv1midground.png<>uid://c1bgiu5yrmw4b::::res://level_art/lv1foreground.png<>uid://d3lfehl003idj::::res://level_art/temptileset.webp<>uid://duuk03miavmct::::res://player.tscn
+::res://::1738535441
+BaugetteBlasters.tscn::PackedScene::2945765059243311333::1738535419::0::1::::<><>::res://scripts/cloud_layer.gd<>uid://cwuu2e38h0g65::::res://level_art/seamless-blue-sky-texture.jpg<>uid://b3cgqbpuhqquf::::res://level_art/lv1midground.png<>uid://c1bgiu5yrmw4b::::res://level_art/lv1foreground.png<>uid://d3lfehl003idj::::res://level_art/temptileset.webp<>uid://duuk03miavmct::::res://player.tscn
+bullet.gd::GDScript::-1::1738533628::0::1::::<>Area2D<>::
 bullet.tscn::PackedScene::2010877662085538385::1738466113::0::1::::<><>::res://scripts/bullet.gd
 icon.svg::CompressedTexture2D::631268779909604934::1738466113::1738466165::1::::<><>::
 IMG_1222.png::CompressedTexture2D::3092164767355096372::1738450992::1738490270::0::::<><>::
-level2.tscn::PackedScene::541220687759874574::1738530909::0::1::::<><>::res://scripts/cloud_layer.gd<>uid://yndct63cno52::::res://level_art/seamless-blue-sky-texture-2.png<>uid://d4fe2bc0lxqk2::::res://level_art/lv2midground.png<>uid://c1vcfa7b2hk53::::res://level_art/lv2foreground.png<>uid://d3lfehl003idj::::res://level_art/temptileset.webp<>uid://duuk03miavmct::::res://player.tscn
-player.tscn::PackedScene::8604979783252213167::1738530909::0::1::::<><>::res://scripts/player_move.gd<>uid://dp6gk7gdx7a2e::::res://player_animations/IMG_1240.png<>uid://bq3gbv68fsot4::::res://player_animations/fphil-idle.png<>uid://ns8qfo13bkhi::::res://player_animations/run_frame1.png<>uid://cour43042uril::::res://player_animations/IMG_1241.png<>uid://yynp6wfcm21g::::res://player_animations/run_frame2.png<>uid://5b6a2tvk6u5p::::res://player_animations/run_frame3.png<>uid://bj27qv8vy6cg::::res://player_animations/run_frame4.png
+level2.tscn::PackedScene::541220687759874574::1738535420::0::1::::<><>::res://scripts/cloud_layer.gd<>uid://yndct63cno52::::res://level_art/seamless-blue-sky-texture-2.png<>uid://d4fe2bc0lxqk2::::res://level_art/lv2midground.png<>uid://c1vcfa7b2hk53::::res://level_art/lv2foreground.png<>uid://d3lfehl003idj::::res://level_art/temptileset.webp<>uid://duuk03miavmct::::res://player.tscn
+player.tscn::PackedScene::8604979783252213167::1738535419::0::1::::<><>::res://scripts/player_move.gd<>uid://dp6gk7gdx7a2e::::res://player_animations/IMG_1240.png<>uid://bq3gbv68fsot4::::res://player_animations/fphil-idle.png<>uid://ns8qfo13bkhi::::res://player_animations/run_frame1.png<>uid://cour43042uril::::res://player_animations/IMG_1241.png<>uid://yynp6wfcm21g::::res://player_animations/run_frame2.png<>uid://5b6a2tvk6u5p::::res://player_animations/run_frame3.png<>uid://bj27qv8vy6cg::::res://player_animations/run_frame4.png
 ::res://enemy_animations/::1738495331
 8b6b2dd5d54d4b5aed2726bf7d605fa1gzYzK95bInbWzUcr-0.png::CompressedTexture2D::2612068199999974076::1738495270::1738495331::1::::<><>::
 8b6b2dd5d54d4b5aed2726bf7d605fa1gzYzK95bInbWzUcr-1.png::CompressedTexture2D::867191107758439722::1738495270::1738495331::1::::<><>::
@@ -24,7 +25,7 @@ d5e29e2ac1c04bc986e8c6c1bb7c2f32YKJSx3dmou8ECyge-1.png::CompressedTexture2D::508
 d5e29e2ac1c04bc986e8c6c1bb7c2f32YKJSx3dmou8ECyge-2.png::CompressedTexture2D::4153220322879701832::1738495259::1738495331::1::::<><>::
 d5e29e2ac1c04bc986e8c6c1bb7c2f32YKJSx3dmou8ECyge-3.png::CompressedTexture2D::4642884695296440029::1738495259::1738495331::1::::<><>::
 d5e29e2ac1c04bc986e8c6c1bb7c2f32YKJSx3dmou8ECyge-4.png::CompressedTexture2D::457129215785515326::1738495259::1738495331::1::::<><>::
-::res://level_art/::1738531262
+::res://level_art/::1738531280
 kempen-peterstrasse-west-650.jpg::CompressedTexture2D::2464221728323888020::1738466113::1738466166::1::::<><>::
 lv1foreground-2.png::CompressedTexture2D::5042676945972253756::1738467058::1738467065::1::::<><>::
 lv1foreground.png::CompressedTexture2D::6600195365961743139::1738489485::1738489488::1::::<><>::
@@ -42,7 +43,7 @@ run_frame1.png::CompressedTexture2D::951646285794070694::1738490098::1738490143:
 run_frame2.png::CompressedTexture2D::1734895083664654470::1738490100::1738490143::1::::<><>::
 run_frame3.png::CompressedTexture2D::2109613362121279315::1738490103::1738490143::1::::<><>::
 run_frame4.png::CompressedTexture2D::90465621977127862::1738490106::1738490143::1::::<><>::
-::res://scripts/::1738495333
+::res://scripts/::1738535441
 bullet.gd::GDScript::-1::1738491050::0::1::::<>Area2D<>::
 cloud_layer.gd::GDScript::-1::1738466113::0::1::::<>ParallaxLayer<>::
-player_move.gd::GDScript::-1::1738495333::0::1::::<>CharacterBody2D<>::
+player_move.gd::GDScript::-1::1738533628::0::1::::<>CharacterBody2D<>::
