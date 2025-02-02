@@ -74,6 +74,7 @@ func playeranim():
 		if is_on_floor():
 			if (is_in_air == true):
 				is_in_air = false
+				#this is refusing to work and im loosing my mind
 				$AnimatedSprite2D.play("impact")
 				animation_lock = true
 		else:
