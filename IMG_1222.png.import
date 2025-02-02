@@ -2,16 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br28t5qtmj5kx"
-path="res://.godot/imported/frame_0_delay-0.25s.png-0ab7f371fb854173be9e962f1bacd309.ctex"
-metadata={
-"vram_texture": false
-}
+uid="uid://daf3u0bk8i25t"
+valid=false
 
 [deps]
 
-source_file="res://player_animations/frame_0_delay-0.25s.png"
-dest_files=["res://.godot/imported/frame_0_delay-0.25s.png-0ab7f371fb854173be9e962f1bacd309.ctex"]
+source_file="res://IMG_1222.png"
 
 [params]
 

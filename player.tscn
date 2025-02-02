@@ -45,7 +45,6 @@ position = Vector2(-6, -6)
 scale = Vector2(0.342975, 0.342975)
 sprite_frames = SubResource("SpriteFrames_o2f5s")
 animation = &"run"
-frame_progress = 0.718712
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 5.5)
@@ -54,3 +53,6 @@ shape = SubResource("RectangleShape2D_jfbab")
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
 limit_top = 0
+
+[node name="BulletSpawn" type="Marker2D" parent="."]
+position = Vector2(50, 0)

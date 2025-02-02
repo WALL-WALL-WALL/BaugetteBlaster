@@ -5,6 +5,11 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -450.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+@export var Bullet : PackedScene = preload("res://bullet.tscn")
+
+func _process(_delta):
+	if Input.is_action_just_pressed("bang"):
+		shoot()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -37,3 +42,15 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+
+func shoot():
+	#(make player stop and/or turn toward mouse when shooting?)
+	$BulletSpawn.position.x = 100 - 200 * int($AnimatedSprite2D.flip_h)
+	int()
+	var b = Bullet.instantiate()
+	b.position = $BulletSpawn.position
+	var mouse = get_local_mouse_position()
+	b.set_velocity(mouse)
+	
+	add_child(b)

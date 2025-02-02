@@ -2,16 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3cgqbpuhqquf"
-path="res://.godot/imported/lv1midground.png-5386df20c96010b12d68a94f05179143.ctex"
-metadata={
-"vram_texture": false
-}
+uid="uid://bqeogju5u5fko"
+valid=false
 
 [deps]
 
-source_file="res://level_art/lv1midground.png"
-dest_files=["res://.godot/imported/lv1midground.png-5386df20c96010b12d68a94f05179143.ctex"]
+source_file="res://player_animations/IMG_1222.png"
 
 [params]
 
