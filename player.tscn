@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://duuk03miavmct"]
+[gd_scene load_steps=12 format=3 uid="uid://duuk03miavmct"]
 
 [ext_resource type="Script" path="res://scripts/player_move.gd" id="1_prb8v"]
 [ext_resource type="Texture2D" uid="uid://dp6gk7gdx7a2e" path="res://player_animations/IMG_1240.png" id="2_raeiu"]
 [ext_resource type="Texture2D" uid="uid://bq3gbv68fsot4" path="res://player_animations/fphil-idle.png" id="2_wrx26"]
 [ext_resource type="Texture2D" uid="uid://ns8qfo13bkhi" path="res://player_animations/run_frame1.png" id="3_wytbm"]
+[ext_resource type="Texture2D" uid="uid://fpkayp3llr31" path="res://player_animations/IMG_1242.png" id="3_yudop"]
 [ext_resource type="Texture2D" uid="uid://cour43042uril" path="res://player_animations/IMG_1241.png" id="4_1kvjo"]
 [ext_resource type="Texture2D" uid="uid://yynp6wfcm21g" path="res://player_animations/run_frame2.png" id="4_p2e5t"]
 [ext_resource type="Texture2D" uid="uid://5b6a2tvk6u5p" path="res://player_animations/run_frame3.png" id="5_427ke"]
@@ -26,6 +27,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"falling",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_yudop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yudop")
+}],
+"loop": true,
+"name": &"firing",
 "speed": 8.0
 }, {
 "frames": [{
@@ -75,7 +87,7 @@ script = ExtResource("1_prb8v")
 position = Vector2(-6, -6)
 scale = Vector2(0.342975, 0.342975)
 sprite_frames = SubResource("SpriteFrames_o2f5s")
-animation = &"impact"
+animation = &"firing"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 5.5)
@@ -84,6 +96,7 @@ shape = SubResource("RectangleShape2D_jfbab")
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
 limit_top = 0
+position_smoothing_enabled = true
 
 [node name="BulletSpawn" type="Marker2D" parent="."]
 position = Vector2(50, 0)

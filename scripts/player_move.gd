@@ -77,6 +77,9 @@ func playeranim():
 		$AnimatedSprite2D.play("run")
 	elif playerstate == "jump":
 		$AnimatedSprite2D.play("falling")
+	elif playerstate == "shooting":
+		$AnimatedSprite2D.play("firing")
+		animation_lock = true
 	
 	if is_on_floor():
 		if is_in_air:
@@ -96,6 +99,7 @@ func shoot():
 	else:
 		$AnimatedSprite2D.flip_h = false
 	$BulletSpawn.position.x = distMuzzle - distMuzzle*2 * int($AnimatedSprite2D.flip_h)
+	playerstate = "shooting"
 	int()
 	var b = Bullet.instantiate()          #needs preload b/c "Bullet" isn't in this source
 	b.position = $BulletSpawn.position

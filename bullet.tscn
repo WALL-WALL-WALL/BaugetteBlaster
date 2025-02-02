@@ -1,9 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://3wc4jwunptyn"]
 
 [ext_resource type="Script" path="res://scripts/bullet.gd" id="1_myo45"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wpgiu"]
-size = Vector2(50, 50)
+[ext_resource type="Texture2D" uid="uid://c5vv2ijms86i5" path="res://player_animations/IMG_1244.png" id="2_myaes"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x8031"]
 radius = 25.0
@@ -13,7 +11,9 @@ script = ExtResource("1_myo45")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("PlaceholderTexture2D_wpgiu")
+position = Vector2(-4, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_myaes")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_x8031")
