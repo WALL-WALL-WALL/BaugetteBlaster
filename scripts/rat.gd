@@ -47,8 +47,7 @@ func animate():
 		$AnimatedSprite2D.play("snazzy_rat_walk")
 
 func _on_hit(body: Node2D):
-	print("recieved")
 	if body == self:
-		health += -1
+		health -= 1
 		if health <= 0:
 			queue_free()

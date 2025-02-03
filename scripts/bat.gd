@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED = 200.0
 var direction = 1
 var flipped = false
+var health = 2
 
 
 func _process(_delta):
@@ -25,9 +26,15 @@ func _process(_delta):
 		flipped = true
 		$flip.start()
 	move_and_slide()
-
-
+	
 
 func _on_flip_timeout() -> void:
 	direction = direction * -1
 	flipped = false
+
+
+func _on_hit(body: Node2D):
+	if body == self:
+		health -= 1
+		if health <= 0:
+			queue_free()
