@@ -1,1 +1,11 @@
+res://bat.tscn
+res://scripts/bat.gd
+res://scripts/rat.gd
+res://rat.tscn
+res://level1.tscn
+res://player.tscn
+res://level2.tscn
+res://level3.tscn
+res://bullet.tscn
+res://levelexit.tscn
 res://noble.tscn

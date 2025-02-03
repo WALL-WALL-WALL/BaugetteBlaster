@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://o3v13vu8adhd"]
 
-[ext_resource type="Script" path="res://scripts/rat.gd" id="1_ir1kt"]
+[ext_resource type="Script" path="res://scripts/noble.gd" id="1_qmnhb"]
 [ext_resource type="Texture2D" uid="uid://cbejmnihxxyor" path="res://enemy_animations/d5e29e2ac1c04bc986e8c6c1bb7c2f32YKJSx3dmou8ECyge-0.png" id="2_b5fky"]
 [ext_resource type="Texture2D" uid="uid://ceqw17o205x16" path="res://enemy_animations/d5e29e2ac1c04bc986e8c6c1bb7c2f32YKJSx3dmou8ECyge-1.png" id="3_sggx6"]
 [ext_resource type="Texture2D" uid="uid://b0f36xkmt7hwq" path="res://enemy_animations/d5e29e2ac1c04bc986e8c6c1bb7c2f32YKJSx3dmou8ECyge-2.png" id="4_d0hqg"]
@@ -59,27 +59,33 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mqv2n"]
-radius = 117.5
-height = 670.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wmnv"]
+size = Vector2(230, 640)
 
 [node name="noble" type="CharacterBody2D" groups=["enemies"]]
 scale = Vector2(0.4, 0.4)
 collision_layer = 2
-script = ExtResource("1_ir1kt")
+script = ExtResource("1_qmnhb")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -50)
 sprite_frames = SubResource("SpriteFrames_brxkv")
 animation = &"noble_walk"
-frame_progress = 0.479693
+frame_progress = 0.22064
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -47.5)
-shape = SubResource("CapsuleShape2D_mqv2n")
+shape = SubResource("RectangleShape2D_6wmnv")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
 position = Vector2(2.5, -45)
 scale = Vector2(0.671429, 5.20833)
 rect = Rect2(-175, -60, 350, 120)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bh77k5c7b3j30"]
+[gd_scene load_steps=12 format=4 uid="uid://bh77k5c7b3j30"]
 
 [ext_resource type="Script" path="res://scripts/cloud_layer.gd" id="1_pg01g"]
 [ext_resource type="Texture2D" uid="uid://cwuu2e38h0g65" path="res://level_art/seamless-blue-sky-texture.jpg" id="2_siq8n"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://djgspmj2nftq3" path="res://levelexit.tscn" id="8_07gvp"]
 [ext_resource type="PackedScene" uid="uid://blxvqlasul5sn" path="res://bat.tscn" id="8_ghv45"]
 [ext_resource type="PackedScene" uid="uid://o3v13vu8adhd" path="res://noble.tscn" id="9_6jl6u"]
-[ext_resource type="PackedScene" uid="uid://bn5u2mmu6mkqu" path="res://rat.tscn" id="10_2f8uj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c0ika"]
 texture = ExtResource("5_o3ehm")
@@ -884,6 +883,3 @@ scale = Vector2(0.5, 0.5)
 
 [node name="noble" parent="." instance=ExtResource("9_6jl6u")]
 position = Vector2(848, 1099)
-
-[node name="Rat" parent="." instance=ExtResource("10_2f8uj")]
-position = Vector2(532, 1144)
