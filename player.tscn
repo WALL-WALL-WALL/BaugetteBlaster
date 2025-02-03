@@ -101,4 +101,9 @@ position_smoothing_enabled = true
 [node name="BulletSpawn" type="Marker2D" parent="."]
 position = Vector2(50, 0)
 
+[node name="cooldown" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="on_animation_finished"]
+[connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]

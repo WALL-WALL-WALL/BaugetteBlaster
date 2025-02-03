@@ -9,6 +9,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var playerstate = "idle"
 var animation_lock = false
 var is_in_air = false
+var ready_to_shoot = true
 
 @export var Bullet : PackedScene = preload("res://bullet.tscn")
 
@@ -16,7 +17,9 @@ func _ready():   #this occurs ONCE after initialization is finished
 	pass
 	
 func _process(_delta):
-	if Input.is_action_just_pressed("bang"):
+	if Input.is_action_just_pressed("bang") and ready_to_shoot == true:
+		$cooldown.start()
+		ready_to_shoot = false
 		shoot()
 
 
@@ -93,6 +96,7 @@ func on_animation_finished():
 
 
 func shoot():
+
 	const distMuzzle = 100
 	if get_local_mouse_position().x < 0:            #If shot at spawn, sprite would turn if mouse was on screen's left-side instead of player's
 		$AnimatedSprite2D.flip_h = true
@@ -106,3 +110,7 @@ func shoot():
 	b.set_velocity(get_local_mouse_position())
 	
 	add_child(b)
+
+
+func _on_cooldown_timeout() -> void:
+	ready_to_shoot = true

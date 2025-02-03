@@ -7,3 +7,5 @@ res://scripts/player_move.gd
 res://level3.tscn
 res://level1.tscn
 res://bullet.tscn
+res://scripts/bat.gd
+res://bat.tscn

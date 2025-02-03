@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://bh77k5c7b3j30"]
+[gd_scene load_steps=10 format=4 uid="uid://bh77k5c7b3j30"]
 
 [ext_resource type="Script" path="res://scripts/cloud_layer.gd" id="1_pg01g"]
 [ext_resource type="Texture2D" uid="uid://cwuu2e38h0g65" path="res://level_art/seamless-blue-sky-texture.jpg" id="2_siq8n"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c1bgiu5yrmw4b" path="res://level_art/lv1foreground.png" id="4_y3r8p"]
 [ext_resource type="Texture2D" uid="uid://d3lfehl003idj" path="res://level_art/temptileset.webp" id="5_o3ehm"]
 [ext_resource type="PackedScene" uid="uid://duuk03miavmct" path="res://player.tscn" id="6_5npey"]
+[ext_resource type="PackedScene" uid="uid://blxvqlasul5sn" path="res://bat.tscn" id="7_xxb1d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c0ika"]
 texture = ExtResource("5_o3ehm")
@@ -870,3 +871,7 @@ rendering_quadrant_size = 64
 
 [node name="Player" parent="." instance=ExtResource("6_5npey")]
 position = Vector2(77, 1152)
+
+[node name="Bat" parent="." instance=ExtResource("7_xxb1d")]
+position = Vector2(592, 995)
+scale = Vector2(0.5, 0.5)
