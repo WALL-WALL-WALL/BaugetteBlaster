@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://bh77k5c7b3j30"]
+[gd_scene load_steps=18 format=4 uid="uid://bh77k5c7b3j30"]
 
 [ext_resource type="Script" path="res://scripts/cloud_layer.gd" id="1_pg01g"]
 [ext_resource type="Texture2D" uid="uid://cwuu2e38h0g65" path="res://level_art/seamless-blue-sky-texture.jpg" id="2_siq8n"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c5rda81fr51tx" path="res://level_art/759eafd5b4e044c397f02f8a6d4f3043sbBKACWbS2XFyxZ5-0.png" id="11_8axms"]
 [ext_resource type="Texture2D" uid="uid://06g0r6g3n650" path="res://level_art/759eafd5b4e044c397f02f8a6d4f3043sbBKACWbS2XFyxZ5-1.png" id="12_l2l60"]
 [ext_resource type="Texture2D" uid="uid://dqbqlobtk4gpa" path="res://level_art/759eafd5b4e044c397f02f8a6d4f3043sbBKACWbS2XFyxZ5-2.png" id="13_rhl04"]
+[ext_resource type="AudioStream" uid="uid://kkdu4cgljd1" path="res://theme of a shop that sells things you dont want.mp3" id="14_ga08x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c0ika"]
 texture = ExtResource("5_o3ehm")
@@ -913,6 +914,12 @@ position = Vector2(162, 966)
 scale = Vector2(0.432609, 0.432609)
 sprite_frames = SubResource("SpriteFrames_2ggw0")
 frame_progress = 0.777197
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(871, 1104)
+scale = Vector2(0.4, 0.4)
+stream = ExtResource("14_ga08x")
+autoplay = true
 
 [node name="noble2" parent="." instance=ExtResource("9_6jl6u")]
 position = Vector2(871, 1104)

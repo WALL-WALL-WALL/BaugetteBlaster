@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://hyf3cpri5eug"]
+[gd_scene load_steps=11 format=4 uid="uid://hyf3cpri5eug"]
 
 [ext_resource type="Script" path="res://scripts/cloud_layer.gd" id="1_gs54l"]
 [ext_resource type="Texture2D" uid="uid://yndct63cno52" path="res://level_art/seamless-blue-sky-texture-2.png" id="2_ehhtt"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d3lfehl003idj" path="res://level_art/temptileset.webp" id="5_vw1lw"]
 [ext_resource type="PackedScene" uid="uid://duuk03miavmct" path="res://player.tscn" id="6_2vwm7"]
 [ext_resource type="PackedScene" uid="uid://djgspmj2nftq3" path="res://levelexit.tscn" id="7_815a1"]
+[ext_resource type="AudioStream" uid="uid://bklhwrih0chvp" path="res://8 bit  accordion  guitar  dnb (eventually).mp3" id="8_r8t66"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a3jkc"]
 texture = ExtResource("5_vw1lw")
@@ -874,3 +875,7 @@ position = Vector2(50, 1158)
 
 [node name="levelexit" parent="." instance=ExtResource("7_815a1")]
 position = Vector2(2110, 1147)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_r8t66")
+autoplay = true
