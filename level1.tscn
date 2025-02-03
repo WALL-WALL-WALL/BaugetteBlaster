@@ -896,6 +896,12 @@ rendering_quadrant_size = 64
 [node name="Player" parent="." instance=ExtResource("6_5npey")]
 position = Vector2(242, 1159)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
+position = Vector2(629, -55)
+scale = Vector2(0.4, 0.4)
+stream = ExtResource("14_ga08x")
+autoplay = true
+
 [node name="levelexit" parent="." instance=ExtResource("8_07gvp")]
 position = Vector2(3878, 1138)
 
@@ -914,12 +920,6 @@ position = Vector2(162, 966)
 scale = Vector2(0.432609, 0.432609)
 sprite_frames = SubResource("SpriteFrames_2ggw0")
 frame_progress = 0.777197
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(871, 1104)
-scale = Vector2(0.4, 0.4)
-stream = ExtResource("14_ga08x")
-autoplay = true
 
 [node name="noble2" parent="." instance=ExtResource("9_6jl6u")]
 position = Vector2(871, 1104)

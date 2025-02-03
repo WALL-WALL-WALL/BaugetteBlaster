@@ -873,9 +873,10 @@ rendering_quadrant_size = 64
 [node name="Player" parent="." instance=ExtResource("6_2vwm7")]
 position = Vector2(50, 1158)
 
-[node name="levelexit" parent="." instance=ExtResource("7_815a1")]
-position = Vector2(2110, 1147)
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
+position = Vector2(-50, -1158)
 stream = ExtResource("8_r8t66")
 autoplay = true
+
+[node name="levelexit" parent="." instance=ExtResource("7_815a1")]
+position = Vector2(2110, 1147)
