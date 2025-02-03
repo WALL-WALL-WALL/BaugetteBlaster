@@ -1,17 +1,54 @@
-[gd_scene load_steps=12 format=3 uid="uid://duuk03miavmct"]
+[gd_scene load_steps=21 format=3 uid="uid://duuk03miavmct"]
 
 [ext_resource type="Script" path="res://scripts/player_move.gd" id="1_prb8v"]
+[ext_resource type="Texture2D" uid="uid://cf12sqtu4jtcu" path="res://player_animations/8137bb827b39437f82c846f747130bcafjJUw1yFgEHgrufh-0.png" id="2_gah11"]
 [ext_resource type="Texture2D" uid="uid://dp6gk7gdx7a2e" path="res://player_animations/IMG_1240.png" id="2_raeiu"]
 [ext_resource type="Texture2D" uid="uid://bq3gbv68fsot4" path="res://player_animations/fphil-idle.png" id="2_wrx26"]
+[ext_resource type="Texture2D" uid="uid://vlb3cydqkxdn" path="res://player_animations/8137bb827b39437f82c846f747130bcafjJUw1yFgEHgrufh-1.png" id="3_slau2"]
 [ext_resource type="Texture2D" uid="uid://ns8qfo13bkhi" path="res://player_animations/run_frame1.png" id="3_wytbm"]
 [ext_resource type="Texture2D" uid="uid://fpkayp3llr31" path="res://player_animations/IMG_1242.png" id="3_yudop"]
 [ext_resource type="Texture2D" uid="uid://cour43042uril" path="res://player_animations/IMG_1241.png" id="4_1kvjo"]
+[ext_resource type="Texture2D" uid="uid://drrpcw35uv3d2" path="res://player_animations/8137bb827b39437f82c846f747130bcafjJUw1yFgEHgrufh-2.png" id="4_h8kvv"]
 [ext_resource type="Texture2D" uid="uid://yynp6wfcm21g" path="res://player_animations/run_frame2.png" id="4_p2e5t"]
 [ext_resource type="Texture2D" uid="uid://5b6a2tvk6u5p" path="res://player_animations/run_frame3.png" id="5_427ke"]
+[ext_resource type="Texture2D" uid="uid://pbvarfe4trwg" path="res://player_animations/8137bb827b39437f82c846f747130bcafjJUw1yFgEHgrufh-3.png" id="5_vwkru"]
+[ext_resource type="Texture2D" uid="uid://05usfk6w5b3x" path="res://player_animations/8137bb827b39437f82c846f747130bcafjJUw1yFgEHgrufh-4.png" id="6_2pru2"]
 [ext_resource type="Texture2D" uid="uid://bj27qv8vy6cg" path="res://player_animations/run_frame4.png" id="6_8mqd0"]
+[ext_resource type="Texture2D" uid="uid://ccv670ukhgxw7" path="res://player_animations/8137bb827b39437f82c846f747130bcafjJUw1yFgEHgrufh-5.png" id="7_5o4ql"]
+[ext_resource type="Texture2D" uid="uid://cpc850lsd8p0r" path="res://player_animations/8137bb827b39437f82c846f747130bcafjJUw1yFgEHgrufh-6.png" id="8_l6m5c"]
+[ext_resource type="Texture2D" uid="uid://bpqdaumblhurs" path="res://player_animations/8137bb827b39437f82c846f747130bcafjJUw1yFgEHgrufh-7.png" id="9_jwvon"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o2f5s"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gah11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_slau2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h8kvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vwkru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2pru2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5o4ql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_l6m5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jwvon")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_raeiu")
@@ -80,6 +117,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfbab"]
 size = Vector2(65, 97)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vmxdp"]
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_prb8v")
 
@@ -87,7 +126,7 @@ script = ExtResource("1_prb8v")
 position = Vector2(-6, -6)
 scale = Vector2(0.342975, 0.342975)
 sprite_frames = SubResource("SpriteFrames_o2f5s")
-animation = &"firing"
+animation = &"death"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 5.5)
@@ -104,6 +143,11 @@ position = Vector2(50, 0)
 [node name="cooldown" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_vmxdp")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="on_animation_finished"]
 [connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]

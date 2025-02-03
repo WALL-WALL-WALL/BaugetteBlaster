@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://blxvqlasul5sn"]
+[gd_scene load_steps=6 format=3 uid="uid://blxvqlasul5sn"]
 
+[ext_resource type="Script" path="res://scripts/bat.gd" id="1_ry8vu"]
 [ext_resource type="Texture2D" uid="uid://bdhkm8fov27au" path="res://enemy_animations/8b6b2dd5d54d4b5aed2726bf7d605fa1gzYzK95bInbWzUcr-0.png" id="2_yo7ii"]
 [ext_resource type="Texture2D" uid="uid://mmcrmskw0afy" path="res://enemy_animations/8b6b2dd5d54d4b5aed2726bf7d605fa1gzYzK95bInbWzUcr-1.png" id="3_c8r1k"]
 
@@ -21,6 +22,7 @@ animations = [{
 radius = 49.0408
 
 [node name="Bat" type="CharacterBody2D"]
+script = ExtResource("1_ry8vu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_o3xbq")

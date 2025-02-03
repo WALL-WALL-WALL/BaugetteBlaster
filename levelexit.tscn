@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://djgspmj2nftq3"]
+
+[ext_resource type="Script" path="res://scripts/levelexit.gd" id="1_deh06"]
+[ext_resource type="Texture2D" uid="uid://bspr8bgbpb0gn" path="res://60fe968c3d624000048712a0.png" id="2_ellhe"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1xdx5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ellhe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1tpp"]
+size = Vector2(6, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcg5g"]
+size = Vector2(128, 86)
+
+[node name="levelexit" type="CharacterBody2D"]
+script = ExtResource("1_deh06")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.073, 0.1)
+sprite_frames = SubResource("SpriteFrames_1xdx5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_n1tpp")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_tcg5g")
+
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]

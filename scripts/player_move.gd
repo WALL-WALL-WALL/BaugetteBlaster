@@ -10,6 +10,7 @@ var playerstate = "idle"
 var animation_lock = false
 var is_in_air = false
 var ready_to_shoot = true
+var health = 3
 
 @export var Bullet : PackedScene = preload("res://bullet.tscn")
 
@@ -83,6 +84,10 @@ func playeranim():
 	elif playerstate == "shooting":
 		$AnimatedSprite2D.play("firing")
 		animation_lock = true
+	elif playerstate == "dying":
+		$AnimatedSprite2D.play("death")
+		animation_lock = true
+		death()
 	
 	if is_on_floor():
 		if is_in_air:
@@ -114,3 +119,8 @@ func shoot():
 
 func _on_cooldown_timeout() -> void:
 	ready_to_shoot = true
+
+func death():
+	queue_free()
+	var current_scene_file = get_tree().current_scene.scene_file_path
+	get_tree().change_scene_to_file(current_scene_file)
