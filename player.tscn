@@ -120,6 +120,7 @@ size = Vector2(65, 97)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vmxdp"]
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 3
 script = ExtResource("1_prb8v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

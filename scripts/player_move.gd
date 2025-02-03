@@ -102,7 +102,7 @@ func on_animation_finished():
 
 func shoot():
 
-	const distMuzzle = 100
+	const distMuzzle = 40
 	if get_local_mouse_position().x < 0:            #If shot at spawn, sprite would turn if mouse was on screen's left-side instead of player's
 		$AnimatedSprite2D.flip_h = true
 	else:
@@ -116,7 +116,10 @@ func shoot():
 	
 	add_child(b)
 
-
+func _on_attack():
+	#$AnimatedSprite2D.modulate = Color(1,0,0)
+	health -= 1
+	
 func _on_cooldown_timeout() -> void:
 	ready_to_shoot = true
 
