@@ -1,10 +1,1 @@
-res://level1.tscn
-res://scripts/bat.gd
-res://scripts/player_move.gd
-res://bat.tscn
-res://scripts/levelexit.gd
-res://player.tscn
-res://level2.tscn
-res://level3.tscn
-res://bullet.tscn
-res://levelexit.tscn
+res://noble.tscn
