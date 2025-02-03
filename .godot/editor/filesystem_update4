@@ -1,3 +1,5 @@
+res://vampire.tscn
+res://scripts/vampire.gd
 res://level3.tscn
 res://level1.tscn
 res://player.tscn
