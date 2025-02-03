@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://bn5u2mmu6mkqu"]
+
+[ext_resource type="Script" path="res://scripts/rat.gd" id="1_ctnej"]
+[ext_resource type="Texture2D" uid="uid://citkdmv35vnxt" path="res://enemy_animations/27ef48b84d8c4aeb8a5aad05df0a130aVLDRbtNMYj6uQAVu-0.png" id="2_ya8ga"]
+[ext_resource type="Texture2D" uid="uid://bohbrnf01gyi0" path="res://enemy_animations/27ef48b84d8c4aeb8a5aad05df0a130aVLDRbtNMYj6uQAVu-1.png" id="3_f2fvp"]
+[ext_resource type="Texture2D" uid="uid://g71rcgn0rnck" path="res://enemy_animations/438a383c43c04a309287cfc6abfe4b6dEx8tSYuqaYc1fTUR-0.png" id="4_h3r5n"]
+[ext_resource type="Texture2D" uid="uid://dhm4lxmqf87fc" path="res://enemy_animations/438a383c43c04a309287cfc6abfe4b6dEx8tSYuqaYc1fTUR-1.png" id="5_thfvn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_47vep"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ya8ga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_f2fvp")
+}],
+"loop": true,
+"name": &"angry_rat_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_h3r5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_thfvn")
+}],
+"loop": true,
+"name": &"snazzy_rat_walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mqv2n"]
+radius = 61.0
+height = 362.0
+
+[node name="Rat" type="CharacterBody2D" groups=["enemies"]]
+scale = Vector2(0.4, 0.4)
+collision_layer = 2
+script = ExtResource("1_ctnej")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -50)
+sprite_frames = SubResource("SpriteFrames_47vep")
+animation = &"angry_rat_walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_mqv2n")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(2.5, 0)
+rect = Rect2(-175, -60, 350, 120)
