@@ -1,11 +1,14 @@
-res://vampire.tscn
-res://scripts/vampire.gd
-res://level3.tscn
 res://level1.tscn
 res://player.tscn
 res://level2.tscn
+res://level3.tscn
 res://bullet.tscn
 res://bat.tscn
 res://levelexit.tscn
 res://rat.tscn
 res://noble.tscn
+res://vampire.tscn
+res://scripts/player_move.gd
+res://scripts/rat.gd
+res://scripts/bat.gd
+res://scripts/levelexit.gd

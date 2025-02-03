@@ -1,13 +1,13 @@
+AudioStreamPlayer2D
+RichTextLabel
+Sprite2D
 Timer
 VisibleOnScreenEnabler2D
 CollisionShape2D
 AnimatedSprite2D
 CharacterBody2D
-RichTextLabel
 CanvasLayer
-AudioStreamPlayer2D
 Area2D
-Sprite2D
 TileMapLayer
 TileMap
 ParallaxLayer

@@ -46,7 +46,13 @@ func animate():
 		$AnimatedSprite2D.play("snazzy_rat_walk")
 
 func _on_hit(body: Node2D):
+	print("recieved")
 	if body == self:
-		health -= 1
+		health += -1
+		$AnimatedSprite2D.modulate = Color(1,0,0)
+		$Timer.start()
 		if health <= 0:
 			queue_free()
+
+func _on_timer_timeout() -> void:
+	$AnimatedSprite2D.modulate = Color(1,1,1)# Replace with function body.

@@ -92,9 +92,9 @@ func playeranim():
 		$AnimatedSprite2D.play("run")
 	elif playerstate == "jump":
 		$AnimatedSprite2D.play("falling")
-	elif playerstate == "shooting":
-		$AnimatedSprite2D.play("firing")
-		animation_lock = true
+	#elif playerstate == "shooting":
+	#	$AnimatedSprite2D.play("firing")
+	#	animation_lock = true
 	if dying:
 		$AnimatedSprite2D.play("death")
 		animation_lock = true

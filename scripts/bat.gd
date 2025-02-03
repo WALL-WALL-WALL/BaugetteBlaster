@@ -7,7 +7,7 @@ const SPEED = 200.0
 var target
 var direction
 var direction2 = -1
-var health = 2
+var health = 1
 
 
 func _ready():
@@ -55,7 +55,7 @@ func _on_fire_timeout() -> void:
 	var target = get_node("../Player")
 	var b = Bullet.instantiate()          #needs preload b/c "Bullet" isn't in this source
 	b.position = $BulletSpawn.position
-	b.set_velocity(target.position - position)
+	b.set_velocity((target.position - position)/2)
 	b.owned = self
 	print(b.owned)
 	
