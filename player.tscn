@@ -45,7 +45,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("9_jwvon")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
 "speed": 5.0
 }, {
@@ -119,8 +119,8 @@ size = Vector2(65, 97)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vmxdp"]
 
-[node name="Player" type="CharacterBody2D"]
-collision_mask = 3
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_mask = 11
 script = ExtResource("1_prb8v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -150,5 +150,14 @@ one_shot = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_vmxdp")
 
+[node name="deathAnim" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="iFrames" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="on_animation_finished"]
 [connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]
+[connection signal="timeout" from="deathAnim" to="." method="_on_death_anim_timeout"]
+[connection signal="timeout" from="iFrames" to="." method="_on_i_frames_timeout"]

@@ -3,7 +3,6 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-signal attack
 var direction
 @export var type = "angry"
 var health = 2
@@ -37,7 +36,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	for i in get_slide_collision_count():
 		if get_slide_collision(i).get_collider().name == "Player":
-			attack.emit()
+			target._on_attack()
 	
 
 func animate():
@@ -47,13 +46,7 @@ func animate():
 		$AnimatedSprite2D.play("snazzy_rat_walk")
 
 func _on_hit(body: Node2D):
-	print("recieved")
 	if body == self:
-		health += -1
-		$AnimatedSprite2D.modulate = Color(1,0,0)
-		$Timer.start()
+		health -= 1
 		if health <= 0:
 			queue_free()
-
-func _on_timer_timeout() -> void:
-	$AnimatedSprite2D.modulate = Color(1,1,1)

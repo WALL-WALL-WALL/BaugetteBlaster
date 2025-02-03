@@ -21,7 +21,9 @@ size = Vector2(6, 6)
 size = Vector2(128, 86)
 
 [node name="levelexit" type="CharacterBody2D"]
+collision_layer = 8
 script = ExtResource("1_deh06")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.073, 0.1)
