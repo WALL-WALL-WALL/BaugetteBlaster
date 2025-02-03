@@ -9,3 +9,4 @@ res://level3.tscn
 res://bullet.tscn
 res://levelexit.tscn
 res://noble.tscn
+res://scripts/noble.gd
